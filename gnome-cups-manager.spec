@@ -55,6 +55,7 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.sub .
 %configure
 %{__make}
 
