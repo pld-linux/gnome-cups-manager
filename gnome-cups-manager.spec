@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
 # Source0-md5:	1aa72f8318a7ccb795cdfd2676d6346c
-URL:		http://www.gnome.org
+URL:		http://www.gnome.org/
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
