@@ -2,7 +2,7 @@ Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
 Version:	0.30
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-cups-manager/0.30/%{name}-%{version}.tar.bz2
@@ -75,12 +75,12 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 
@@ -100,19 +100,19 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/gnome-cups-manager
 %attr(755,root,root) %{_sbindir}/gnome-cups-switch
 %attr(755,root,root) %{_libdir}/libgnomecupsui*.so.*.*.*
-%{_libdir}/bonobo/servers/Gnome_CupsManager.server
 %{_datadir}/%{name}
+%{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/48x48/devices/*.png
 %{_iconsdir}/hicolor/48x48/stock/data/*.png
+%{_libdir}/bonobo/servers/Gnome_CupsManager.server
 %{_pixmapsdir}/%{name}
-%{_datadir}/gnome/capplets/*.desktop
 
 %files devel
 %defattr(644,root,root,755)
 %doc ChangeLog
 %attr(755,root,root) %{_libdir}/libgnomecupsui*.so
-%{_libdir}/libgnomecupsui*.la
 %{_includedir}/libgnomecups-1/libgnomecups/*.h
+%{_libdir}/libgnomecupsui*.la
 %{_pkgconfigdir}/libgnomecupsui*.pc
 
 %files static
