@@ -1,24 +1,23 @@
 --- gnome-cups-manager-0.17/gnome-cups-add/Makefile.am.orig	2003-05-02 12:44:21.000000000 +0200
 +++ gnome-cups-manager-0.17/gnome-cups-add/Makefile.am	2004-04-05 18:51:39.434586772 +0200
-@@ -11,7 +11,7 @@
+@@ -11,7 +11,6 @@
  	-DLIBDIR=\""$(libdir)"\" \
  	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
- 	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED	\
+-	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED	\
 -	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED
-+	-DGNOME_DISABLE_DEPRECATED
++	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED
  
  cupsmanagerdatadir=$(datadir)/gnome-cups-manager
  cupsmanagerdata_DATA=gnome-cups-add.glade
 --- gnome-cups-manager-0.17/gnome-cups-manager/Makefile.am.orig	2003-07-01 17:16:48.000000000 +0200
 +++ gnome-cups-manager-0.17/gnome-cups-manager/Makefile.am	2004-04-05 18:51:12.828963675 +0200
-@@ -9,8 +9,8 @@
+@@ -9,8 +9,7 @@
  	-DGNOME_CUPS_MANAGER_PIXMAPDIR=\""$(datadir)/pixmaps/gnome-cups-manager"\" \
  	-DLIBDIR=\""$(libdir)"\" \
  	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 -	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED	\
 -	-DGTK_DISABLE_DEPRECATED -DGNOME_DISABLE_DEPRECATED
-+	-DGDK_DISABLE_DEPRECATED	\
-+	-DGNOME_DISABLE_DEPRECATED
++	-DGDK_DISABLE_DEPRECATED
  
  cupsmanagerdatadir=$(datadir)/gnome-cups-manager
  cupsmanagerdata_DATA=gnome-cups-manager.glade
