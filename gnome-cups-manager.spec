@@ -1,4 +1,5 @@
 Summary:	GNOME manager for CUPS printers
+Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
 Version:	0.16
 Release:	1
@@ -8,31 +9,43 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.16/%{name}-%{version}.
 # Source0-md5:	745bcd136ba9e13433303462e9ad6a1e
 URL:		http://www.gnome.org
 BuildRequires:	gtk+2-devel >= 2.0.0
-BuildRequires:	libgnomeui-devel >= 2.0.0
-BuildRequires:	libgnomecups-devel >= 0.1.4
-BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnomeprint-devel
 BuildRequires:	libbonobo-devel >= 2.0.0
+BuildRequires:	libglade2-devel >= 2.0.0
+BuildRequires:	libgnomecups-devel >= 0.1.4
+BuildRequires:	libgnomeprint-devel
+BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 GNOME manager for CUPS printers.
 
+%description -l pl
+Zarz±dca drukarek CUPS dla GNOME.
+
 %package devel
 Summary:	Devel files for gnome-cups-manager (libgnomecupsui)
+Summary(pl):	Pliki nag³ówkowe dla gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	libgnomecups-devel >= 0.1.4
 
 %description devel
 Devel files for gnome-cups-manager (libgnomecupsui).
 
+%description devel -l pl
+Pliki nag³ówkowe dla gnome-cups-manager (libgnomecupsui).
+
 %package static
 Summary:	gnome-cups-manager (libgnomecupsui) static library
+Summary(pl):	Statyczna biblioteka gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}
 
 %description static
 gnome-cups-manager (libgnomecupsui) static library.
+
+%description static -l pl
+Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
 %setup -q
@@ -69,9 +82,8 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %doc ChangeLog
-%defattr(644,root,root,755)
+%attr(755,root,root) %{_libdir}/libgnomecupsui*.so
 %{_libdir}/libgnomecupsui*.la
-%{_libdir}/libgnomecupsui*.so
 %{_includedir}/libgnomecups-1/libgnomecups/*.h
 %{_pkgconfigdir}/libgnomecupsui*.pc
 
