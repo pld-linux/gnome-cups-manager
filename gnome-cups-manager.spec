@@ -1,12 +1,12 @@
 Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
-Version:	0.23
+Version:	0.24
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.23/%{name}-%{version}.tar.bz2
-# Source0-md5:	5972a95baaee639f57e5d6e12ab1d88a
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.24/%{name}-%{version}.tar.bz2
+# Source0-md5:	b94744668f7d21175849a911f9d109fa
 Source1:	%{name}-cc.desktop
 Patch0:		%{name}-locale-names.patch
 URL:		http://www.gnome.org/
@@ -18,7 +18,7 @@ BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.20
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnomecups-devel >= 0.1.10
+BuildRequires:	libgnomecups-devel >= 0.1.11
 BuildRequires:	libgnomeprint-devel >= 2.6.0
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libsmbclient-devel
@@ -40,7 +40,7 @@ Summary(pl):	Pliki nag³ówkowe dla gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.4.4
-Requires:	libgnomecups-devel >= 0.1.9
+Requires:	libgnomecups-devel >= 0.1.11
 
 %description devel
 Devel files for gnome-cups-manager (libgnomecupsui).
@@ -64,7 +64,7 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 %setup -q
 %patch0 -p1
 
-mv po/{no,nb}.po
+rm po/no.po
 
 %build
 %{__libtoolize}
