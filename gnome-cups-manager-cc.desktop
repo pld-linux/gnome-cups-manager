@@ -12,3 +12,4 @@ Categories=Application;Settings;Advanced;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-cups-manager
 X-GNOME-Bugzilla-Component=general
+# vi: encoding=utf-8
