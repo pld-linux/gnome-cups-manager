@@ -1,17 +1,17 @@
 Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
-Version:	0.16
+Version:	0.17
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.16/%{name}-%{version}.tar.bz2
-# Source0-md5:	745bcd136ba9e13433303462e9ad6a1e
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
+# Source0-md5:	1aa72f8318a7ccb795cdfd2676d6346c
 URL:		http://www.gnome.org
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnomecups-devel >= 0.1.4
+BuildRequires:	libgnomecups-devel >= 0.1.5
 BuildRequires:	libgnomeprint-devel
 BuildRequires:	libgnomeui-devel >= 2.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -60,16 +60,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS README
 %attr(755,root,root) %{_bindir}/gnome-cups-add
+%attr(755,root,root) %{_bindir}/gnome-cups-icon
 %attr(755,root,root) %{_bindir}/gnome-cups-manager
 %attr(755,root,root) %{_sbindir}/gnome-cups-switch
 %attr(755,root,root) %{_libdir}/libgnomecupsui*.so.*.*.*
