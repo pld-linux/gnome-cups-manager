@@ -1,23 +1,24 @@
 Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
-Version:	0.17
-Release:	5
+Version:	0.18
+Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
-# Source0-md5:	1aa72f8318a7ccb795cdfd2676d6346c
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.18/%{name}-%{version}.tar.bz2
+# Source0-md5:	d8508654ed956de73fa62a72b4358a1a
 Source1:	%{name}-cc.desktop
-Patch0:		%{name}-gtk24.patch
+Patch0:		%{name}-gcc34.patch
+Patch1:		%{name}-locale-names.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
 BuildRequires:	gnome-common >= 2.4.0
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 2.3.1
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
 BuildRequires:	libgnomecups-devel >= 0.1.5
-BuildRequires:	libgnomeprint-devel
+BuildRequires:	libgnomeprint-devel >= 2.5.0
 BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
@@ -59,6 +60,9 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+
+mv po/{no,nb}.po
 
 %build
 %{__libtoolize}
@@ -96,8 +100,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgnomecupsui*.so.*.*.*
 %{_libdir}/bonobo/servers/Gnome_CupsManager.server
 %{_datadir}/%{name}
-%{_iconsdir}/gnome/48x48/devices/*.png
-%{_iconsdir}/gnome/48x48/emblems/*.png
+%{_iconsdir}/hicolor/48x48/devices/*.png
+%{_iconsdir}/hicolor/48x48/emblems/*.png
 %{_pixmapsdir}/%{name}
 %{_datadir}/gnome/capplets/*.desktop
 
