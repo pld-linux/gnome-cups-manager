@@ -75,12 +75,12 @@ mv po/{no,nb}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_desktopdir}
+install -d $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/gnome/capplets
 
 %find_lang %{name}
 
@@ -103,7 +103,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/48x48/devices/*.png
 %{_iconsdir}/hicolor/48x48/emblems/*.png
 %{_pixmapsdir}/%{name}
-%{_desktopdir}/*.desktop
+%{_datadir}/gnome/capplets/*.desktop
 
 %files devel
 %defattr(644,root,root,755)
