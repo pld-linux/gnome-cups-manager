@@ -1,12 +1,12 @@
 Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
-Version:	0.28
+Version:	0.30
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.28/%{name}-%{version}.tar.bz2
-# Source0-md5:	bcb0649a53282fea52d730980aff552a
+Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-cups-manager/0.30/%{name}-%{version}.tar.bz2
+# Source0-md5:	ca4649aaaa3e5d25ec90c144440ad0f2
 Source1:	%{name}-cc.desktop
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
@@ -17,7 +17,7 @@ BuildRequires:	gtk+2-devel >= 2:2.4.4
 BuildRequires:	intltool >= 0.20
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
-BuildRequires:	libgnomecups-devel >= 0.1.14
+BuildRequires:	libgnomecups-devel >= 0.2.0
 BuildRequires:	libgnomeprint-devel >= 2.6.0
 BuildRequires:	libgnomeui-devel >= 2.4.0
 BuildRequires:	libsmbclient-devel
