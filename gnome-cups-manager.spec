@@ -8,8 +8,11 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.17/%{name}-%{version}.tar.bz2
 # Source0-md5:	1aa72f8318a7ccb795cdfd2676d6346c
 Source1:	%{name}-cc.desktop
+Patch0:		%{name}-gtk24.patch
 URL:		http://www.gnome.org/
+BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
+BuildRequires:	gnome-common >= 2.4.0
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 2.0.0
@@ -17,6 +20,7 @@ BuildRequires:	libgnomecups-devel >= 0.1.5
 BuildRequires:	libgnomeprint-devel
 BuildRequires:	libgnomeui-devel >= 2.3.3.1-2
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtool
 Requires:	gnome-icon-theme
 Obsoletes:	gnome-cups-manager-cc-applet <= 0.17-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -54,9 +58,14 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-cp -f /usr/share/automake/config.sub .
+%{__libtoolize}
+%{__aclocal} -I %{_aclocaldir}/gnome2-macros
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
 %{__make}
 
