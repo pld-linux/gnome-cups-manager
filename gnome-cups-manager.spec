@@ -19,12 +19,13 @@ BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 1:2.5.1
 BuildRequires:	libgnomecups-devel >= 0.2.0
 BuildRequires:	libgnomeprint-devel >= 2.10.0
-BuildRequires:	libgnomeui-devel >= 2.10.0-02
+BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libsmbclient-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
+BuildRequires:	cups-devel >= 1.1.23
 Requires:	gnome-icon-theme
-Requires:	gnomesu >= 2.10.0
+Requires:	gnomesu >= 0.3
 Obsoletes:	gnome-cups-manager-cc-applet <= 0.17-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
