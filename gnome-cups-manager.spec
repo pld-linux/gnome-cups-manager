@@ -2,12 +2,13 @@ Summary:	GNOME manager for CUPS printers
 Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
 Version:	0.25
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/0.25/%{name}-%{version}.tar.bz2
 # Source0-md5:	96fd6c0e2ecb0a340986cea95cc9d283
 Source1:	%{name}-cc.desktop
+Patch0:		%{name}-gtk24.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -61,6 +62,7 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}
