@@ -5,8 +5,8 @@ diff -aurN gnome-cups-manager-0.18.orig/configure.in gnome-cups-manager-0.18/con
  AC_PROG_INTLTOOL([0.20])
  
  dnl Add the languages which your application supports here.
--ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr it ja ko nl no pa pt pt_BR sr sr@Latn sv tr uk"
-+ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr it ja ko nb nl pa pt pt_BR sr sr@Latn sv tr uk"
+-ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nl no pa pt pt_BR sr sr@Latn sv tr uk"
++ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nb nl pa pt pt_BR sr sr@Latn sv tr uk"
  AM_GLIB_GNU_GETTEXT
  
  AC_OUTPUT([
