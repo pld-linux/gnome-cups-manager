@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Printers
+Name[pl]=Drukarki
+Comment=Printers configuration
+Comment[pl]=Konfiguracja drukarek
+Icon=gnome-printers-properties.png
+Exec=gnome-cups-manager
+Terminal=false
+Type=Application
+Categories=Application;Settings;Advanced;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-cups-manager
+X-GNOME-Bugzilla-Component=general
