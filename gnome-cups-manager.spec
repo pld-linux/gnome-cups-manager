@@ -24,6 +24,7 @@ BuildRequires:	libsmbclient-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
 Requires:	gnome-icon-theme
+Requires:	gnomesu
 Obsoletes:	gnome-cups-manager-cc-applet <= 0.17-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
