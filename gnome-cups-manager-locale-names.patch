@@ -1,12 +1,12 @@
-diff -aurN gnome-cups-manager-0.18.orig/configure.in gnome-cups-manager-0.18/configure.in
---- gnome-cups-manager-0.18.orig/configure.in	2004-06-04 21:58:08.000000000 +0200
-+++ gnome-cups-manager-0.18/configure.in	2004-06-07 00:56:34.960133792 +0200
-@@ -59,7 +59,7 @@
+diff -urN gnome-cups-manager-0.23.oirg/configure.in gnome-cups-manager-0.23/configure.in
+--- gnome-cups-manager-0.23.oirg/configure.in	2004-08-18 18:25:24.855317328 +0200
++++ gnome-cups-manager-0.23/configure.in	2004-08-18 18:25:40.077003280 +0200
+@@ -83,7 +83,7 @@
  AC_PROG_INTLTOOL([0.20])
  
  dnl Add the languages which your application supports here.
--ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nl no pa pt pt_BR sr sr@Latn sv tr uk"
-+ALL_LINGUAS="ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nb nl pa pt pt_BR sr sr@Latn sv tr uk"
+-ALL_LINGUAS="bg ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nl no pa pt pt_BR sr sr@Latn sv tr uk"
++ALL_LINGUAS="bg ca cs de el en_CA en_GB es fi fr he hr hu it ja ko nb nl pa pt pt_BR sr sr@Latn sv tr uk"
  AM_GLIB_GNU_GETTEXT
  
  AC_OUTPUT([
