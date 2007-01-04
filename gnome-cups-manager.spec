@@ -8,6 +8,7 @@ Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-cups-manager/%{version}/%{name}-%{version}.tar.bz2
 # Source0-md5:	4144b2cf05e381e89fed066793e3b249
 Source1:	%{name}-cc.desktop
+Patch0:		%{name}-version.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -63,6 +64,7 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__libtoolize}
