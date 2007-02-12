@@ -1,5 +1,5 @@
 Summary:	GNOME manager for CUPS printers
-Summary(pl):	Zarz±dca drukarek CUPS dla GNOME
+Summary(pl.UTF-8):   ZarzƒÖdca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
 Version:	0.31
 Release:	0.1
@@ -33,12 +33,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GNOME manager for CUPS printers.
 
-%description -l pl
-Zarz±dca drukarek CUPS dla GNOME.
+%description -l pl.UTF-8
+ZarzƒÖdca drukarek CUPS dla GNOME.
 
 %package devel
 Summary:	Devel files for gnome-cups-manager (libgnomecupsui)
-Summary(pl):	Pliki nag≥Ûwkowe dla gnome-cups-manager (libgnomecupsui)
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe dla gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.6.3
@@ -47,19 +47,19 @@ Requires:	libgnomecups-devel >= 0.1.14
 %description devel
 Devel files for gnome-cups-manager (libgnomecupsui).
 
-%description devel -l pl
-Pliki nag≥Ûwkowe dla gnome-cups-manager (libgnomecupsui).
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe dla gnome-cups-manager (libgnomecupsui).
 
 %package static
 Summary:	gnome-cups-manager (libgnomecupsui) static library
-Summary(pl):	Statyczna biblioteka gnome-cups-manager (libgnomecupsui)
+Summary(pl.UTF-8):   Statyczna biblioteka gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 gnome-cups-manager (libgnomecupsui) static library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
