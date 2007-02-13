@@ -1,5 +1,5 @@
 Summary:	GNOME manager for CUPS printers
-Summary(pl.UTF-8):   Zarządca drukarek CUPS dla GNOME
+Summary(pl.UTF-8):	Zarządca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
 Version:	0.31
 Release:	0.1
@@ -38,7 +38,7 @@ Zarządca drukarek CUPS dla GNOME.
 
 %package devel
 Summary:	Devel files for gnome-cups-manager (libgnomecupsui)
-Summary(pl.UTF-8):   Pliki nagłówkowe dla gnome-cups-manager (libgnomecupsui)
+Summary(pl.UTF-8):	Pliki nagłówkowe dla gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtk+2-devel >= 2:2.6.3
@@ -52,7 +52,7 @@ Pliki nagłówkowe dla gnome-cups-manager (libgnomecupsui).
 
 %package static
 Summary:	gnome-cups-manager (libgnomecupsui) static library
-Summary(pl.UTF-8):   Statyczna biblioteka gnome-cups-manager (libgnomecupsui)
+Summary(pl.UTF-8):	Statyczna biblioteka gnome-cups-manager (libgnomecupsui)
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
