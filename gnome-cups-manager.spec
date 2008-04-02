@@ -1,14 +1,13 @@
 Summary:	GNOME manager for CUPS printers
 Summary(pl.UTF-8):	Zarządca drukarek CUPS dla GNOME
 Name:		gnome-cups-manager
-Version:	0.31
-Release:	2
+Version:	0.33
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/gnome/sources/gnome-cups-manager/%{version}/%{name}-%{version}.tar.bz2
-# Source0-md5:	4144b2cf05e381e89fed066793e3b249
+# Source0-md5:	a48eb85cd239760913c936d824062473
 Source1:	%{name}-cc.desktop
-Patch0:		%{name}-version.patch
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
@@ -66,7 +65,6 @@ Statyczna biblioteka gnome-cups-manager (libgnomecupsui).
 
 %prep
 %setup -q
-%patch0 -p0
 
 %build
 %{__libtoolize}
@@ -86,7 +84,6 @@ install -d $RPM_BUILD_ROOT%{_desktopdir}
 
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
-rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
 [ -d $RPM_BUILD_ROOT%{_datadir}/locale/sr@latin ] || \
 	mv -f $RPM_BUILD_ROOT%{_datadir}/locale/sr@{Latn,latin}
 %find_lang %{name}
@@ -108,6 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/48x48/devices/*.png
+%{_iconsdir}/hicolor/48x48/stock/data/*.icon
 %{_iconsdir}/hicolor/48x48/stock/data/*.png
 %{_libdir}/bonobo/servers/Gnome_CupsManager.server
 %{_pixmapsdir}/%{name}
