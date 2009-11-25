@@ -11,6 +11,8 @@ Source1:	%{name}-cc.desktop
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf >= 2.52
 BuildRequires:	automake
+BuildRequires:	cups-devel >= 1.1.23
+BuildRequires:	gettext-devel
 BuildRequires:	gnome-common >= 2.8.0
 BuildRequires:	gnome-keyring-devel
 BuildRequires:	gtk+2-devel >= 2:2.6.3
@@ -23,7 +25,7 @@ BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libsmbclient-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	libtool
-BuildRequires:	cups-devel >= 1.1.23
+BuildRequires:	pkgconfig
 Requires:	gnome-icon-theme
 Requires:	gnomesu >= 0.3
 Obsoletes:	gnome-cups-manager-cc-applet <= 0.17-3
