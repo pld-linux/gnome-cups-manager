@@ -14,13 +14,12 @@ BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.23
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-common >= 2.8.0
-BuildRequires:	gnome-keyring-devel
 BuildRequires:	gtk+2-devel >= 2:2.6.3
 BuildRequires:	intltool >= 0.20
 BuildRequires:	libbonobo-devel >= 2.0.0
 BuildRequires:	libglade2-devel >= 1:2.5.1
+BuildRequires:	libgnome-keyring-devel
 BuildRequires:	libgnomecups-devel >= 0.2.3
-BuildRequires:	libgnomeprint-devel >= 2.10.0
 BuildRequires:	libgnomeui-devel >= 2.10.0-2
 BuildRequires:	libsmbclient-devel
 BuildRequires:	libstdc++-devel
